@@ -1,8 +1,3 @@
-/*
- * Rui Santos 
- * Complete Project Details https://randomnerdtutorials.com
- */
-
 // include TFT and SPI libraries
 #include <TFT.h>  
 #include <SPI.h>
@@ -20,7 +15,7 @@ void setup() {
 
   Serial.println();
   Serial.print("MOSI=");Serial.println(MOSI);
-  Serial.print("MOSI=");Serial.println(MISO);
+  Serial.print("MISO=");Serial.println(MISO);
   Serial.print("SDA =");Serial.println(SDA);
   Serial.print("SCK =");Serial.println(SCK);
   
