@@ -8,9 +8,9 @@
 #include <SPI.h>
 
 // pin definition for Arduino UNO
-#define cs   5 // D1
-#define dc   4  // D2
-#define rst  2  // D4
+#define cs   14 //15 //5 // D1
+#define dc   33 // 9 //4  // D2
+#define rst  25 // 8 //2  // D4
 
 
 // create an instance of the library
@@ -18,6 +18,12 @@ TFT TFTscreen = TFT(cs, dc, rst);
 
 void setup() {
 
+  Serial.println();
+  Serial.print("MOSI=");Serial.println(MOSI);
+  Serial.print("MOSI=");Serial.println(MISO);
+  Serial.print("SDA =");Serial.println(SDA);
+  Serial.print("SCK =");Serial.println(SCK);
+  
   //initialize the library
   TFTscreen.begin();
 
@@ -41,5 +47,5 @@ void loop() {
   TFTscreen.text("Hello, World!", 6, 57);
   
   // wait 200 miliseconds until change to next color
-  delay(200);
+  delay(2000);
 }
